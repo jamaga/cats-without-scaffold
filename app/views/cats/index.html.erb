@@ -1,25 +1,13 @@
 <h1>All the LOLcats!!!1</h1>
 
+
+<p><%= link_to "New LOLcat", new_cat_path %></p>
+
 <div class="cats-list">
-
   <ul>
-
-    <% @cats.each do |cat| %>
-
-      <li>
-
-        <%= cat.name %>
-
-        <span class='birth-date'>
-
-          <%= cat.birth_date.to_s(:short) %>
-
-        </span>
-
-      </li>
-
-    <% end %>
-
+    <%= render 'cats' %>
   </ul>
-
 </div>
+
+
+

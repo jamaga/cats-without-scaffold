@@ -1,10 +1,19 @@
 <h1>Adding LOLcat</h1>
 
 <%= form_for @cat do |f| %>
+  <% if @cat.errors.any? %>
+    <div class="form-errors">
+     <ul>
+      <%= @cat.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+       <% end %>
+    </ul> 
+  </div>
+<% end %>
 
   <p>
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "name-field" %>
   </p>
 
   <p>

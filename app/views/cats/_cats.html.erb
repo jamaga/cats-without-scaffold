@@ -1,0 +1,17 @@
+
+    <% @cats.each do |cat| %>
+      <li>
+        <%= cat.name %>
+        <span class='birth-date'>
+        <!-- only format the date if birth_date exists -->
+          <%= cat.birth_date.to_s(:short) if cat.birth_date %>
+        </span>
+
+  <span class='actions'>
+    <%= link_to "More Info", cat_path(cat) %>
+    <%= link_to "Delete", cat_path(cat), method: :delete,
+                                data: { confirm: "Are you sure?" }%>
+  </span>
+      </li>
+    <% end %>
+ 

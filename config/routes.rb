@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+#create another route BEFORE the resources so it overrides the default /cats/:id
+  get 'cats/search', to: 'cats#search'
   resources :cats
 
   # The priority is based upon order of creation: first created -> highest priority.
