@@ -1,2 +1,9 @@
 <h1>Welcome to our LOLcats collection</h1>
 <p>We have the best LOLcats. They can has cheezburger.</p>
+
+
+<% @cats.each do |cat| %>
+
+	<%= link_to( image_tag(cat.picture), cat) %>
+
+	<% end %>

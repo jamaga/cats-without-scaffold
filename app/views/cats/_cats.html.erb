@@ -12,6 +12,12 @@
     <%= link_to "Delete", cat_path(cat), method: :delete,
                                 data: { confirm: "Are you sure?" }%>
   </span>
+
+    <strong>
+    <!-- check if no owner, dispay first, if owner - display second -->
+    <%= cat.owner.nil? ? "No Owner" : 
+                   link_to("Has an Owner", cat.owner) %>
+    </strong>
       </li>
     <% end %>
- 
+

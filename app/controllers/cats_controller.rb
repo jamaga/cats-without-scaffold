@@ -55,7 +55,7 @@ class CatsController < ApplicationController
   #filterinng bad params from a form
 
   def cat_params
-    params.require(:cat).permit(:name, :birth_date)
+    params.require(:cat).permit(:name, :birth_date, :owner_id, :picture)
   end
 
   def assign_cat
